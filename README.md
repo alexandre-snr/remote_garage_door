@@ -3,5 +3,5 @@
 
 A simple Arduino script meant to be ran on an ESP32.  
 It will connect to Wifi (don't forget to create a `secrets.h` file) and expose a web service on port 80.  
-When a request is made on this server out the `/toggle_garage_door` route, it wills trigger a relay plugged on port 23 for a second.  
+When a request is made on this server out the `/toggle_garage_door` route, it wills trigger a relay plugged on pin 23 for a second.  
 Network configuration must be changed in `remote_garage_door.ino`.
