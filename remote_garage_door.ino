@@ -9,23 +9,23 @@ IPAddress subnet(255, 255, 255, 0);
 IPAddress primaryDNS(1, 1, 1, 1);
 IPAddress secondaryDNS(1, 0, 0, 1);
 
-const int LED_PIN = 23;
+const int RELAY_PIN = 23;
 
 WiFiServer server(80);
 
 String header;
 
 void toggle_garage_door() {
-  digitalWrite(LED_PIN, HIGH);
+  digitalWrite(RELAY_PIN, HIGH);
   delay(1000);
-  digitalWrite(LED_PIN, LOW);
+  digitalWrite(RELAY_PIN, LOW);
   Serial.println("Garage door toggled.");
 }
 
 void setup() {
   Serial.begin(9600);
 
-  pinMode(LED_PIN, OUTPUT);
+  pinMode(RELAY_PIN, OUTPUT);
 
   delay(5000);
   
